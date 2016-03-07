@@ -18,7 +18,7 @@ public class Main {
     final static Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) throws SQLException, FileNotFoundException {
 	// write your code here
-        Connection conn = DriverManager.getConnection("jdbc:h2:mem:eventHandler");
+        Connection conn = DriverManager.getConnection("jdbc:h2:mem:eventHandler");//in memory for develpement so the databse doesnt get messy with test inputs
         createTables(conn);
         populateDatabase("testData.csv", conn);
         populateMyEventsTable("testAttendingData.csv", conn);
