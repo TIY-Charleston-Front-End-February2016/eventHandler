@@ -164,6 +164,7 @@ public class Main {
                 ((request, response) -> {
                     try {
                         int index = Integer.valueOf(request.queryParams("id"));//grabs from a hidden type input the id to be deleted
+                        System.out.println();
                         deleteEvent(conn, index);
                     }
                     catch (NumberFormatException e) {
